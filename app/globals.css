@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 45, 36, 32;
+  --background-start-rgb: 244, 228, 188;
+  --background-end-rgb: 244, 228, 188;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #F4E4BC; /* Fondo Kraft sólido */
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%235d4037' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Clases de utilidad personalizadas */
+.btn-primary {
+  @apply bg-brand-accent text-white px-6 py-3 rounded-md font-bold hover:bg-orange-700 transition-colors shadow-md uppercase tracking-wide;
+}
+
+.input-field {
+  @apply w-full p-3 border-2 border-brand-brown/20 bg-brand-light rounded-md focus:border-brand-accent focus:outline-none text-brand-dark;
+}
+
+.card-select {
+  @apply border-2 rounded-lg p-4 cursor-pointer transition-all bg-brand-light hover:shadow-lg;
+}
+
+.card-select.selected {
+  @apply border-brand-accent bg-orange-50 ring-1 ring-brand-accent;
+}
